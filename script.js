@@ -69,7 +69,6 @@ window.addEventListener('load',() =>{
         }
     }
 });
-
 /* delay menu*/ 
 document.querySelectorAll('.menu-item').forEach((item, i) => {
     item.style.animationDelay = `${(i + 1) * 0.1}s`;
