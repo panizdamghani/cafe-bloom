@@ -144,7 +144,7 @@ ul{
     inset: 0;
     width: 100%;
     height: 100%;
-    background-image: url("images/cafe.png");
+    background-image: url("images/cafe.webp");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -575,7 +575,8 @@ section h2{
 
     .hero{
         min-height: 100vh;
-        height: auto;
+        height: calc(100vh - 70px);
+        margin-top: 70px;
     }
     .hero-content{
         width: 100%;
