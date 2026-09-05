@@ -4,128 +4,159 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="منوی کافه بلوم - نوشیدنی‌های گرم و سرد">
-        <meta name="theme-color" content="#17100c">
+        <meta name="theme-color" content="#5A4840">
+        <meta property="og:image" content="images/cafe.png">
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75'>🌿</text></svg>">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
-        <title> منوی کافه بلوم</title>
+        <title>منوی کافه بلوم</title>
     </head>
 
     <body>
         <header>
-            <nav class="navbar"  aria-label="منوی اصلی">
+            <nav class="navbar" aria-label="منوی اصلی">
                 <div class="navbar-content">
                     <a href="index.html" class="logo" aria-label="صفحه اصلی کافه بلوم">
                         <span class="leaf">🌿</span>
                         <span class="logo-text">Bloom</span>
                     </a>
-               
+                    <ul class="nav-links" id="navLinks">
+                        <li><a href="#about">درباره ما</a></li>
+                        <li><a href="menu.html">منو</a></li>
+                        <li><a href="index.html" aria-current="page">صفحه اصلی</a></li>
+                    </ul>
                     <button class="hamburger" id="hamburger" type="button"
-                            aria-label="باز کردن منوی موبایل"
-                            aria-expanded="false"
-                            aria-controls="navLinks">
+                        aria-label="باز کردن منوی موبایل"
+                        aria-expanded="false"
+                        aria-controls="navLinks">
                         <span></span>
                         <span></span>
                         <span></span>
                     </button>
-                <ul class="nav-links" id="navLinks">
-                    <li><a href="menu.html" aria-current="page">منو</a></li>
-                    <li><a href="menu.html">شعب</a></li>      
-                    <li><a href="index.html">صفحه اصلی</a></li>           
-                </ul>
                 </div>
             </nav>
         </header>
-    
-    <main class="menu-page">
-        <section id="hot-drinks">
-            <h2>☕ بار گرم</h2>
-            <article class="menu-item">
-                <img src="images/espresso.png" alt="اسپرسو">
-                <div class="item-info">
-                    <h3>اسپرسو</h3>
-                    <p>قهوه اسپرسوی تک شات ایتالیایی</p>
-                </div>
-                <span class="price">240,000 تومان</span>
-            </article>
 
-            <article class="menu-item">
-                <img src="images/espresso.png" alt="لاته">
-                <div class="item-info">
-                    <h3>لاته</h3>
-                    <p> شات اسپرسو ، شیر با فوم لطیف</p>
-                </div>
-                <span class="price"> 270,000 تومان</span>
-            </article>
+        <main class="menu-page">
+            <div class="filter-btns">
+                <button class="filter-btn active" data-filter="all" type="button">همه</button>
+                <button class="filter-btn" data-filter="hot" type="button">☕ بار گرم</button>
+                <button class="filter-btn" data-filter="cold" type="button">🧊 بار سرد</button>
+            </div>
             
-            <article class="menu-item">
-                <img src="images/espresso.png" alt="کارامل ماکیاتو">
-                <div class="item-info">
-                    <h3>کارامل ماکیاتو</h3>
-                    <p>شات اسپرسو، شیر با فوم زیاد،سس کارامل</p>
-                </div>
-                <span class="price"> 290,000 تومان</span>
-            </article>
+            <section id="hot-drinks" data-category="hot">
+                <h2>☕ بار گرم</h2>
+                <article class="menu-item">
+                    <img src="images/Esspreso.png" alt="اسپرسو" loading="lazy">
+                    <div class="item-info">
+                        <h3>اسپرسو</h3>
+                        <p>قهوه اسپرسوی تک شات ایتالیایی</p>
+                    </div>
+                    <span class="price">240,000 تومان</span>
+                </article>
+                <article class="menu-item">
+                    <img src="images/Latte .png" alt="لاته" loading="lazy">
+                    <div class="item-info">
+                        <h3>لاته</h3>
+                        <p>شات اسپرسو، شیر با فوم لطیف</p>
+                    </div>
+                    <span class="price">270,000 تومان</span>
+                </article>
+                <article class="menu-item">
+                    <img src="images/Caramel Macchiato.png" alt="کارامل ماکیاتو" loading="lazy">
+                    <div class="item-info">
+                        <h3>کارامل ماکیاتو</h3>
+                        <p>شات اسپرسو، شیر با فوم زیاد، سس کارامل</p>
+                    </div>
+                    <span class="price">290,000 تومان</span>
+                </article>
+                <article class="menu-item">
+                    <img src="images/mocha.png" alt="موکا" loading="lazy">
+                    <div class="item-info">
+                        <h3>موکا</h3>
+                        <p>شات اسپرسو، شکلات چیپسی، شیر با فوم کم</p>
+                    </div>
+                    <span class="price">300,000 تومان</span>
+                </article>
+            </section>
 
-            <article class="menu-item">
-                <img src="images/espresso.png" alt="موکا">
-                <div class="item-info">
-                    <h3>موکا</h3>
-                    <p>شات اسپرسو، شکلات چیپسی، شیر با فوم کم</p>
-                </div>
-                <span class="price"> 300,000 تومان</span>
-            </article>
+            <section id="cold-drinks" data-category="cold">
+                <h2>🧊 بار سرد</h2>
+                <article class="menu-item">
+                    <img src="images/mohito.png" alt="موهیتو" loading="lazy">
+                    <div class="item-info">
+                        <h3>موهیتو</h3>
+                        <p>موهیتو دست ساز تازه</p>
+                    </div>
+                    <span class="price">240,000 تومان</span>
+                </article>
+                <article class="menu-item">
+                    <img src="images/watermelon-juice.png" alt="آب هندوانه" loading="lazy">
+                    <div class="item-info">
+                        <h3>آب هندوانه</h3>
+                        <p>آب هندوانه تازه و طبیعی</p>
+                    </div>
+                    <span class="price">280,000 تومان</span>
+                </article>
+                <article class="menu-item">
+                    <img src="images/lemonade.png" alt="لیموناد" loading="lazy">
+                    <div class="item-info">
+                        <h3>لیموناد</h3>
+                        <p>لیمو و نعناع تازه</p>
+                    </div>
+                    <span class="price">240,000 تومان</span>
+                </article>
+                <article class="menu-item">
+                    <img src="images/Red-mohito.png" alt="رد موهیتو" loading="lazy">
+                    <div class="item-info">
+                        <h3>رد موهیتو</h3>
+                        <p>موهیتو با توت‌فرنگی تازه، شیرین و خنک</p>
+                    </div>
+                    <span class="price">250,000 تومان</span>
+                </article>
+                <article class="menu-item">
+                    <img src="images/mangobery.png" alt="منگوبری" loading="lazy">
+                    <div class="item-info">
+                        <h3>منگوبری</h3>
+                        <p>ترکیب پوره انبه، توت‌فرنگی تازه و یخ، با طعمی استوایی</p>
+                    </div>
+                    <span class="price">285,000 تومان</span>
+                </article>
+            </section>
 
-        </section>
+        </main>
 
-        <section id="cold-drinks">
-            <h2> 🧊 بار سرد</h2>
-            
-            <article class="menu-item">
-                <img src="images/mohito.png" alt="موهیتو">
-                <div class="item-info">
-                    <h3>موهیتو</h3>
-                    <p> موهیتو دست ساز تازه</p>
+        <footer>
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-info-box">
+                        <h3>کافه بلوم</h3>
+                        <p>جایی برای تجربه طعم‌های خاص و لحظه‌های آرام</p>
+                    </div>
+                    <div class="footer-info-box">
+                        <h3>اطلاعات</h3>
+                        <div class="footer-details">
+                            <p><strong>🕘 ساعات کاری:</strong> 09:00 تا 00:00</p>
+                            <p><strong>📞 تماس:</strong> 09912280218</p>
+                            <p><strong>📍 آدرس:</strong> تهران، شهرک غرب، ایران زمین</p>
+                        </div>
+                    </div>
+                    <div class="footer-info-box">
+                        <h3>شبکه‌های اجتماعی</h3>
+                        <div class="social-links">
+                            <a href="https://instagram.com" aria-label="اینستاگرام" target="_blank">📷</a>
+                        </div>
+                    </div>
                 </div>
-                <span class="price">240,000 تومان</span>
-            </article>
+                <div class="footer-bottom">
+                    <p class="copyright">© 1405 کافه بلوم - تمام حقوق محفوظ است</p>
+                    <p class="credit">طراحی و توسعه توسط پانیذ ❤️</p>
+                </div>
+            </div>
+        </footer>
 
-            <article class="menu-item">
-                <img src="images/watermelon-juice.png" alt="آب هندوانه">
-                <div class="item-info">
-                    <h3>آب هندوانه</h3>
-                </div>
-
-                <span class="price">280,000 تومان</span>
-            </article>   
-            
-             <article class="menu-item">
-                <img src="images/lemonade.png" alt="لیموناد">
-                <div class="item-info">
-                    <h3>لیموناد</h3>
-                    <p>لیمو و نعناع تازه</p>
-                </div>
-                <span class="price">240,000 تومان</span>
-            </article>   
-             <article class="menu-item">
-                <img src="images/Red-mohito.png" alt="رد موهیتو">
-                <div class="item-info">
-                    <h3>رد موهیتو</h3>
-                    <p>موهیتو با توت‌ فرنگی تازه شیرین و خنک</p>
-                </div>
-                <span class="price">250,000 تومان</span>
-            </article>   
-            <article class="menu-item">
-                <img src="images/mangobery.png" alt="منگوبری">
-                <div class="item-info">
-                    <h3>منگوبری</h3>
-                    <p>ترکیب پوره انبه، توت‌فرنگی تازه و یخ، با طعمی استوایی </p>
-                </div>
-                <span class="price">285,000 تومان</span>
-            </article>   
-        </section>
-    </main>
-    <script src="script.js"></script>
+        <script src="script.js"></script>
     </body>
 </html>
