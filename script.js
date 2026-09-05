@@ -36,7 +36,6 @@ if (hamburger && navLinks) {
     });
 
 }
-
 /*filter menu*/
 const filterBtns = document.querySelectorAll(".filter-btn");
 
@@ -60,6 +59,17 @@ if (filterBtns.length > 0) {
         });
     });
 }
+window.addEventListener('load',() =>{
+    if (window.location.hash) {
+        const target = document.querySelector(window.location.hash);
+        if (target){
+            setTimeout(() =>{
+                target.scrollIntoView({ behavior: 'smooth' });
+            }, 100);
+        }
+    }
+});
+
 /* delay menu*/ 
 document.querySelectorAll('.menu-item').forEach((item, i) => {
     item.style.animationDelay = `${(i + 1) * 0.1}s`;
