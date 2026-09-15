@@ -118,13 +118,14 @@ ul{
     transition: all 0.3s ease;
 }
 .hamburger[aria-expanded="true"] span:nth-child(1){
-    transform: rotate(45deg) translate(10px, 10px);
+    transform: rotate(45deg) translate(5px, 7px);
 }
 .hamburger[aria-expanded="true"] span:nth-child(2){
     opacity: 0;
+    transform: scale(0);
 }
 .hamburger[aria-expanded="true"] span:nth-child(3){
-    transform: rotate(-45deg) translate(6px, -6px);
+    transform: rotate(-45deg) translate(5px, -7px);
 }
 
 /* --- HERO --- */
@@ -296,12 +297,12 @@ ul{
     margin-bottom: 10px;
 }
 .feature h3{
-    color: #ddbe7ded;;
+    color: #ddbe7ded;
     font-size: 18px;
     margin-bottom: 8px;
 }
 .feature p{
-    color: #d4c0aa;;
+    color: #d4c0aa;
     font-size: 17px;
     line-height: 1.8;
     margin: 0;
@@ -540,35 +541,36 @@ section h2{
     .nav-links{
         position: absolute;
         top: 70px;
+        left: 0;
         right: 0;
-        width: 100%;
-        display: flex;
+        background: rgba(58, 42, 30, 0.97);
+        backdrop-filter: blur(20px);
         flex-direction: column;
-        align-items: center;
-        background: #3E2E1F;
-        padding: 0;
+        gap: 0;
         max-height: 0;
         overflow: hidden;
-        border-bottom: 1px solid var(--border);
-        transition: max-height 0.35s ease, padding 0.35s ease;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+        border-bottom: 2px solid var(--border);
+        padding: 0;
     }
     .nav-links.active{
         max-height: 400px;
-        padding: 15px 20px;
+        padding: 10px 20px;
     }
     .nav-links li{
         width: 100%;
         text-align: center;
         border-bottom: 1px solid var(--border);
-        padding: 12px 0;
+        padding:0;
     }
-    .nav-links li:nth-child(1) { order: 3; }
-    .nav-links li:nth-child(2) { order: 2; }
-    .nav-links li:nth-child(3) { order: 1; }
-    
+    .nav-links li:last-child {
+        border-bottom: none;
+    }
     .nav-links a{
         font-size: 17px;
         display: block;
+        padding: 16px 0;
+        width: 100%;
     }
 
     /* HERO */

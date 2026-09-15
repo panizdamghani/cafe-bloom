@@ -1,22 +1,20 @@
-/*navbar*/
+// Mobile navigation toggle with accessibility support
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("navLinks");
 
 if (hamburger && navLinks) {
-
     const closeMenu = () => {
         navLinks.classList.remove("active");
         hamburger.setAttribute("aria-expanded", "false");
     };
 
+    const openMenu = () => {
+        navLinks.classList.add("active");
+        hamburger.setAttribute("aria-expanded", "true");
+    };
+
     const toggleMenu = () => {
-        const isOpen = navLinks.classList.contains("active");
-        if (isOpen) {
-            closeMenu();
-        } else {
-            navLinks.classList.add("active");
-            hamburger.setAttribute("aria-expanded", "true");
-        }
+        navLinks.classList.contains("active") ? closeMenu() : openMenu();
     };
 
     hamburger.addEventListener("click", toggleMenu);
@@ -26,17 +24,14 @@ if (hamburger && navLinks) {
     });
 
     document.addEventListener("click", (e) => {
-        const isClickInsideNav = navLinks.contains(e.target);
-        const isClickOnHamburger = hamburger.contains(e.target);
-        if (!isClickInsideNav && !isClickOnHamburger) closeMenu();
+        if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) closeMenu();
     });
 
     document.addEventListener("keydown", (e) => {
         if (e.key === "Escape") closeMenu();
     });
-
 }
-/*filter menu*/
+// Menu filter
 const filterBtns = document.querySelectorAll(".filter-btn");
 
 if (filterBtns.length > 0) {
@@ -48,28 +43,25 @@ if (filterBtns.length > 0) {
             btn.classList.add("active");
 
             const filter = btn.dataset.filter;
-
+            
             sections.forEach(section => {
-                if (filter === "all" || section.dataset.category === filter) {
-                    section.classList.remove("hidden");
-                } else {
-                    section.classList.add("hidden");
-                }
+                section.classList.toggle("hidden", filter !== "all" && section.dataset.category !== filter);
             });
         });
     });
 }
-window.addEventListener('load',() =>{
+
+window.addEventListener('load', () => {
     if (window.location.hash) {
         const target = document.querySelector(window.location.hash);
-        if (target){
-            setTimeout(() =>{
+        if (target) {
+            setTimeout(() => {
                 target.scrollIntoView({ behavior: 'smooth' });
             }, 100);
         }
     }
 });
-/* delay menu*/ 
+// Delay for menu 
 document.querySelectorAll('.menu-item').forEach((item, i) => {
     item.style.animationDelay = `${(i + 1) * 0.1}s`;
 });
