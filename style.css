@@ -15,7 +15,6 @@
 html{
     scroll-behavior: smooth;
 }
-
 body{
     font-family: 'Vazirmatn', sans-serif;
     background: var(--dark-bg);
@@ -430,7 +429,6 @@ section{
     max-width: 1100px;
     margin: 40px auto;
 }
-
 section h2{
     text-align: center;
     color: var(--gold);
@@ -505,7 +503,8 @@ section h2{
     letter-spacing: 0.5px;
 }
 
-/*ANIMATIONS*/
+/* --- ANIMATIONS --- */
+
 @keyframes showHero{
     from{ opacity: 0; transform: translateY(50px); }
     to{ opacity: 1; transform: translateY(0); }
@@ -522,11 +521,12 @@ section h2{
     from{ opacity: 0; }
     to{ opacity: 1; }
 }
-/* ================= MOBILE ================= */
+
+/* ----- MOBILE ----- */
 
 @media (max-width: 768px){
 
-    /*NAVBAR*/
+    /*--NAVBAR--*/
 
     .navbar-content{
         height: 70px;
@@ -563,7 +563,11 @@ section h2{
         border-bottom: 1px solid var(--border);
         padding:0;
     }
-    .nav-links li:last-child {
+    .nav-links li:nth-child(1) { order: 3; }
+    .nav-links li:nth-child(2) { order: 2; }
+    .nav-links li:nth-child(3) { order: 1; }
+
+    .nav-links li:first-child {
         border-bottom: none;
     }
     .nav-links a{
@@ -573,7 +577,7 @@ section h2{
         width: 100%;
     }
 
-    /* HERO */
+    /* --HERO-- */
 
     .hero{
         min-height: 100vh;
@@ -603,7 +607,7 @@ section h2{
         font-size: 15px;
     }
 
-    /*ABOUT*/
+    /* --ABOUT-- */
 
     .about{
         padding: 70px 18px;
@@ -649,7 +653,7 @@ section h2{
         font-size: 14px;
     }
 
-    /* MENU */
+    /* --MENU-- */
 
     section{
         width: 92%;
@@ -693,7 +697,7 @@ section h2{
         padding: 20px 15px 0;
     }
 
-    /* FOOTER */
+    /* --FOOTER-- */
 
     footer{
         padding: 55px 20px 30px;
@@ -710,7 +714,6 @@ section h2{
     }
 }
 /*SMALL PHONE */
-
 @media (max-width: 500px){
 
     .navbar-content{
